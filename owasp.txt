@@ -1,0 +1,58 @@
+1. What is OWASP and what is its primary mission as described in the article?
+
+OWASP (The Open Web Application Security Project) är ett internationellt organisation
+som fokuserar på säkerhet inom webbapplikationer. En av deras grundsatser är att vem
+som helst ska kunna utöka säkerheten av deras applikationer genom att fritt kunna
+använda sig av materialen som finns på OWASP's hemsida. 
+Materialen på deras hemsida består bland annat av dokumentation, videos, forum och 
+andra verktyg. Deras mest kända projekt är OWASP top 10.
+
+------------------------------------------------------------------------------------
+
+
+2. Explain the concept of "Injection". Provide an example of how an injection 
+attack could compromise a web application's security.
+
+En injektion-attack innebär att någon medvetet skickar opålitlig data till en 
+kodavläsare, t.ex. att någon använder sig av SQL (Structured Query Language) för att
+försöka få tillgång till känslig information genom att utnyttja dålig säkerhet i 
+en applikation, t.ex genom att ställa true/false kommandon i en boolean för att tvinga
+den att returnera olika resultat. 
+
+------------------------------------------------------------------------------------
+
+
+3. Explain two strategies to prevent Broken Authentication vulnerabilities.
+
+Man kan t.ex använda sig av 2FA (Two-factor authentification) eller att hindra 
+användare från att repetera för många inloggnings-försök på kort tid genom att använda
+rate limiting.
+
+------------------------------------------------------------------------------------
+
+
+4. Describe the potential consequences of Insecure Deserialization in web 
+applications. How can developers protect against such attacks?
+
+Serialization innebär att ta olika objekt från kod och konvertera det till något som 
+kan användas för andra syften, t.ex att förvara data. Deserialization är raka motsatsen
+till det, det innebär att konvertera tillbaka data till objekt, ungefär som att 
+packa ur saker ur en flyttlåda.
+
+Ostabil derealization kan resultera i DDos attacker. Det enda sättet att säkert att
+motverka detta är att förhindra derealization från opålitliga sources.
+
+------------------------------------------------------------------------------------
+
+5. Briefly define Cross-Site Scripting (XSS) as outlined in the article and 
+list two methods suggested in the article to prevent XSS attacks in web applications.
+
+Cross-Site Scripting (XSS) är en attack som riktar sig mot mot användaren snarare än
+själva applikationen. Attacken går ut på att medvetet försöka föra över farlig kod
+till användarens webbläsare. Detta går att åstadkomma om man inte bygger sin 
+webbsida/applikation på rätt sätt. 
+
+Ett sätt att förhindra detta är att se till att applikationen kan skilja på sin 
+egna kod och kod som matas in från någon annanstans, t.ex. från ett textfält.
+Att använda sig av applikationer som ReactJS och Ruby on Rails kan också bidra med
+mer säkerhet inom Cross-Site Scripting.
